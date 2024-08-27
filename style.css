@@ -1,0 +1,158 @@
+.calculatorContainer {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    background-color: black;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: darkred;
+    border-width: 10px;
+}
+
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+
+#calculatorDisplay {
+    height: 100px;
+    width: 400px;
+    background-color: #8bac0f;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#keypad {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 5;
+}
+
+.num, .operator {
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.operator {
+    color: white;
+    background-color: orange;
+}
+
+.num {
+    background-color: grey;
+    color: white;
+}
+
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.three {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.addition {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.four {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.substraction {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.seven {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.eight {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.nine {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.multiplication {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.zero {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.decimal {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.division {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.equalsTo {
+    grid-column: 4;
+    grid-row: 5;
+    background-color: green;
+}
+
+.clear {
+    grid-column: 3;
+    grid-row: 5;
+    background-color: darkred;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #306230;
+}
