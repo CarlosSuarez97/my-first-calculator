@@ -13,7 +13,7 @@ function isNumber(value) {
 
 function isSymbol(value) {
     return (
-        value == '+' || value == '-' || value == '*' || value == '/'
+        value == '+' || value == '-' || value == '*' || value == '/' || value == "."
     )
 }
 
@@ -36,6 +36,11 @@ function handleInput(newValue) {
             currentIndex++
             operation[currentIndex] = newValue
             currentIndex++
+        } else if (operation[currentIndex] === undefined && newValue == '.') {
+            operation.push('0');
+            currentIndex++;
+            operation.push(newValue);
+            currentIndex++;
         }
 
     } else if (newValue === '=' || newValue == 'Enter') {
@@ -49,7 +54,7 @@ function handleInput(newValue) {
     } else if (operation[currentIndex] == undefined) {
         displayValue.innerHTML = operation.join('')
     } else {
-        displayValue.innerHTML = operation[currentIndex]
+        displayValue.innerHTML = operation.join('');
     }
 }
 
