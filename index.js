@@ -36,10 +36,14 @@ function handleInput(newValue) {
             currentIndex++
             operation[currentIndex] = newValue
             currentIndex++
-        } else if (operation[currentIndex] === undefined && newValue == '.') {
-            operation.push('0');
+        } else if (operation[currentIndex] == undefined && newValue == '.') {
+            operation[currentIndex] == '0';
             currentIndex++;
-            operation.push(newValue);
+            operation[currentIndex] == newValue;
+            console.log(operation);
+
+        } else if (operation[currentIndex] == '.' && newValue == '.') {
+            operation.splice(currentIndex, currentIndex, newValue);
             currentIndex++;
         }
 
